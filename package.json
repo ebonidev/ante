@@ -13,7 +13,6 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@popperjs/core": "^2.11.6",
     "@types/passport": "^1.0.11",
     "autoprefixer": "^10.4.12",
     "bcrypt": "^5.0.1",
