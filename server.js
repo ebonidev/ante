@@ -27,7 +27,7 @@ require('./config/passport')(passport);
 // config session cookies
 app.use(
     session({
-        secret: process.env.SESSION_SECRET,
+        secret: "keyboard cat",
         resave: false,
         saveUninitialized: false,
         store: MongoStore.create({ mongoUrl: process.env.DB_STRING }),
@@ -63,6 +63,6 @@ app.use('/', rootRoutes);
 app.use('/home', rootRoutes);
 
 //server running
-app.listen(process.env.PORT, () => {
+app.listen($PORT, () => {
     console.log('Server is up and running!');
 });
