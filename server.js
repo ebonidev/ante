@@ -1,18 +1,18 @@
-const express = require('express');
-const app = express();
-const passport = require('passport');
-const path = require('path');
-const session = require('express-session');
-const MongoStore = require('connect-mongo');
-const flash = require('express-flash');
-const methodOverride = require('method-override');
-const logger = require('morgan');
+var express = require('express');
+var app = express();
+var passport = require('passport');
+var path = require('path');
+var session = require('express-session');
+var MongoStore = require('connect-mongo');
+var flash = require('express-flash');
+var methodOverride = require('method-override');
+var logger = require('morgan');
 
 // router files 
-const rootRoutes = require('./routes/root');
+var rootRoutes = require('./routes/root');
 
 //config database
-const connectDB = require('./config/database');
+var connectDB = require('./config/database');
 
 //use .env file
 require('dotenv').config({ path: './config/.env' });

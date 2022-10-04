@@ -1,10 +1,10 @@
-const Post = require('../models/Post');
+var Post = require('../models/Post');
 
 module.exports = {
     getHome: async(req, res) => {
         try {
-            const requests = await Post.find({ user: req.user.id });
-            const openRequests= await Post.countDocuments({
+            var requests = await Post.find({ user: req.user.id });
+            var openRequests= await Post.countDocuments({
                 userId: req.user.id,
                 statusClosed: false
               });

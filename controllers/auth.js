@@ -1,6 +1,6 @@
-const passport = require("passport");
-const validator = require("validator");
-const User = require("../models/User");
+var passport = require("passport");
+var validator = require("validator");
+var User = require("../models/User");
 
 exports.getLogin = (req, res) => {
   if (req.user) {
@@ -12,7 +12,7 @@ exports.getLogin = (req, res) => {
 };
 
 exports.postLogin = (req, res, next) => {
-  const validationErrors = [];
+  var validationErrors = [];
   if (!validator.isEmail(req.body.email))
     validationErrors.push({ msg: "Please enter a valid email address." });
   if (validator.isEmpty(req.body.password))
@@ -66,7 +66,7 @@ exports.getSignup = (req, res) => {
 };
 
 exports.postSignup = (req, res, next) => {
-  const validationErrors = [];
+  var validationErrors = [];
   if (!validator.isEmail(req.body.email))
     validationErrors.push({ msg: "Please enter a valid email address." });
   if (!validator.isLength(req.body.password, { min: 8 }))
@@ -84,7 +84,7 @@ exports.postSignup = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
-  const user = new User({
+  var user = new User({
     userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
