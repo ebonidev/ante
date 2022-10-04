@@ -4,10 +4,10 @@
   "description": "Families and friends can share the support for each other.",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "build": "postcss public/css/tailwind.css -o public/css/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "postcss public/css/tailwind.css -o public/css/style.css"
   },
   "author": "Eboni Evans",
   "license": "GPL-3.0-or-later",
