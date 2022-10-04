@@ -4,7 +4,8 @@
   "description": "Families and friends can share the support for each other.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "build": "postcss public/css/tailwind.css -o public/css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
