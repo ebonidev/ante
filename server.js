@@ -30,7 +30,7 @@ app.use(
         secret: "keyboard cat",
         resave: false,
         saveUninitialized: false,
-        store: MongoStore.create({ mongoUrl: 'mongodb+srv://admin:4CsHppTD6DDL0eFs@ebonidev.9uue8qq.mongodb.net/ante' }),
+        store: MongoStore.create({ mongoUrl: process.env.DB_STRING }),
     })
 );
 
@@ -63,6 +63,6 @@ app.use('/', rootRoutes);
 app.use('/home', rootRoutes);
 
 //server running
-app.listen('7777', () => {
+app.listen(process.env.PORT, () => {
     console.log('Server is up and running!');
 });
