@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/auth');
 const indexController = require('../controllers/index');
-const postController = require("../controllers/post");
-const { ensureAuth, ensureGuest } = require('../controllers/auth');
+const postController = require('../controllers/post');
+const { ensureAuth, ensureGuest } = require('../config/auth');
 
 
 //Main Routes - simplified for now

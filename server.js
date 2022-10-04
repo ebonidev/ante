@@ -11,7 +11,6 @@ const logger = require('morgan');
 
 // router files 
 const rootRoutes = require('./routes/root');
-const postRoutes = require('./routes/post');
 
 //config database
 const connectDB = require('./config/database');
@@ -62,10 +61,6 @@ app.use(logger('dev'));
 //route list
 app.use('/', rootRoutes);
 app.use('/home', rootRoutes);
-app.use('/send', postRoutes);
-
-//remember to run tailwind
-//npm run tailwind:css
 
 //server running
 app.listen(process.env.PORT, () => {
