@@ -1,6 +1,4 @@
 const Post = require('../models/Post');
-//const cloudinary = require('../middleware/cloudinary');
-//const Comment = require("../models/Comment");
 
 module.exports = {
     getHome: async(req, res) => {

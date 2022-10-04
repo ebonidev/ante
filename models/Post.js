@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-//const Supporter = require('../models/Supporter');
 
 const PostSchema = new mongoose.Schema({
   user: {
@@ -42,11 +41,6 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true
   }
-  //,
-  //recipients: {
-  //type: [Supporter],
-  //default: undefined
-  //}
 });
 
 module.exports = mongoose.model('Post', PostSchema);

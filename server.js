@@ -63,6 +63,6 @@ app.use('/', rootRoutes);
 app.use('/home', rootRoutes);
 
 //server running
-app.listen('0.0.0.0:$PORT', () => {
+app.listen('7777', () => {
     console.log('Server is up and running!');
 });
